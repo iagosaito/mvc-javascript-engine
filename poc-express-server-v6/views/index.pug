@@ -11,8 +11,11 @@ block content
                 li= user.age
 
     h1 Busca Usuário por ID
-    form(action='/users', method='GET')
+    form(action='/users', method='POST')
         label(for='userId') User ID:
-        input#userId(type='text', name='id')
+        input(type='text', name='id')
+        input(type='text', name='email')
+        input(type='text', name='name')
+        input(type='text', name='age')
         br
-        button(type='submit') Get User
+        button(type='submit', value='submit') Cadastrar Usuário

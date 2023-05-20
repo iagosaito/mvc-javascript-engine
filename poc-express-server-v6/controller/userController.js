@@ -5,7 +5,7 @@ const userModel = require('../model/userModel')
 router.get('/', (req, res) => {
 
   userModel.getAllUsers((users) => {
-    console.log(users)
+    // console.log(users)
 
     res.render('index', {
       "titulo": 'Usuários',
@@ -38,5 +38,14 @@ router.get('/users/:id', (req, res) => {
     res.json(user);
   });
 });
+
+router.post('/users', (req, res) => {
+  const id = req.body.id;
+  const name = req.body.name;
+  const email = req.body.email;
+  const age = req.body.age;
+
+  console.log(id, name, email, age)
+})
 
 module.exports = router;
