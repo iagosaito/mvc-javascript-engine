@@ -1,0 +1,15 @@
+doctype html
+html 
+    head 
+        style 
+            include ../public/css/main.css
+        title= titulo 
+    body
+        header.header 
+            h1 Usuarios
+        div.conteudo
+            h2 Listagem de Usuários
+            ul 
+                each user in users 
+                    li= user.name 
+                    li= user.age
