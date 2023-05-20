@@ -1,0 +1,18 @@
+extends header 
+
+block content
+    header.header 
+        h1 Usuarios
+    div.conteudo
+        h2 Listagem de Usuários
+        ul 
+            each user in users 
+                li= user.name 
+                li= user.age
+
+    h1 Busca Usuário por ID
+    form(action='/users', method='GET')
+        label(for='userId') User ID:
+        input#userId(type='text', name='id')
+        br
+        button(type='submit') Get User

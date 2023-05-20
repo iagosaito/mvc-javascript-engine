@@ -1,0 +1,10 @@
+.header {
+    background-color: lightcyan;
+    padding: 20px;
+    text-align: center;
+}
+
+.conteudo {
+    background-color: rgb(184, 35, 35);
+    padding: 20px;
+}
